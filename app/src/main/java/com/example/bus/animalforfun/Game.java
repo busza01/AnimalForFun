@@ -27,6 +27,8 @@ public class Game extends AppCompatActivity {
     ArrayList<Integer> qID = new ArrayList<Integer>();
     String answer;
     int score = 0;
+    String Name;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -227,8 +229,9 @@ public class Game extends AppCompatActivity {
 
     private void dialogBoxScore() { //methodแสดงคะแนน
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        String Name = getIntent().getStringExtra("userName");
         builder.setTitle("สรุปคะแนน");
-        builder.setMessage("คุณได้คะแนน "+ score +"คะแนน")
+        builder.setMessage("คุณ" + Name + "ได้" + score +"คะแนน")
         .setCancelable(false)
         .setPositiveButton("ออกจากเกม", new DialogInterface.OnClickListener() {
             @Override

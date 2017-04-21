@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "สวัสดี" + nameString, Toast.LENGTH_SHORT).show();
 
                     Intent startintent = new Intent(MainActivity.this, Game.class);
+                    startintent.putExtra("userName",nameString);
                     startActivity(startintent);
                 }
             }
